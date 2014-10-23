@@ -47,7 +47,7 @@ p1 <- ggplot(data,aes(x=TempC,y=SealWidth,group=LidFilm, colour=LidFilm, shape=L
     theme_bw()
 ggsave(p1,width=11,height=6,file="SealWidthEffects.png")
 p1
-
+ 
 
 
 
