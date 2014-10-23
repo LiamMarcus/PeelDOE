@@ -7,7 +7,7 @@ dataFileName <- tclvalue(tkgetOpenFile())
 myData<-importWorksheets(dataFileName)
 names(myData)
 
-#select the worksheet from the object myData
+#select the worksheet from the object myData.
 data<-myData$FullBurstData
 #data <- filter(data,TimeS==1)
 names(data)

@@ -73,7 +73,8 @@ xlabel="Sealing Temperature (deg C)"
 ylabel="Visual Appearance Score"
 p1 <- ggplot(data,aes(x=TempC,y=Appears,group=LidFilm, colour=LidFilm, shape=LidFilm)) +
     geom_point(size=2, position=position_jitter(width=1.5, height=0.5)) +
-    stat_smooth(span=0.6, size=1, se=FALSE) +
+#    stat_smooth(span=0.6, size=1, se=FALSE) +
+    stat_smooth(method="lm",formula=y~ns(x,df=4), size=1, se=FALSE) +
     scale_y_continuous(minor_breaks = seq(0,6,0.5), breaks = seq(0,6,1)) +
     scale_x_continuous(minor_breaks = seq(110,200,5), breaks = seq(110,200,10)) +
     facet_grid(Material~TimeS) +
@@ -89,7 +90,8 @@ xlabel="Sealing Temperature (deg C)"
 ylabel="Visual Strings Score"
 p1 <- ggplot(data,aes(x=TempC,y=Strings,group=LidFilm, colour=LidFilm, shape=LidFilm)) +
     geom_point(size=2, position=position_jitter(width=1.5, height=0.5)) +
-    stat_smooth(span=0.6, size=1, se=FALSE) +
+#    stat_smooth(span=0.6, size=1, se=FALSE) +
+    stat_smooth(method="lm",formula=y~ns(x,df=4), size=1, se=FALSE) +
     scale_y_continuous(minor_breaks = seq(0,6,0.5), breaks = seq(0,6,1)) +
     scale_x_continuous(minor_breaks = seq(110,200,5), breaks = seq(110,200,10)) +
     facet_grid(Material~TimeS) +
@@ -105,7 +107,8 @@ xlabel="Sealing Temperature (deg C)"
 ylabel="Visual Gaps Score"
 p1 <- ggplot(data,aes(x=TempC,y=Gaps,group=LidFilm, colour=LidFilm, shape=LidFilm)) +
     geom_point(size=2, position=position_jitter(width=1.5, height=0.5)) +
-    stat_smooth(span=0.6, size=1, se=FALSE) +
+#    stat_smooth(span=0.6, size=1, se=FALSE) +
+    stat_smooth(method="lm",formula=y~ns(x,df=4), size=1, se=FALSE) +
     scale_y_continuous(minor_breaks = seq(0,6,0.5), breaks = seq(0,6,1)) +
     scale_x_continuous(minor_breaks = seq(110,200,5), breaks = seq(110,200,10)) +
     facet_grid(Material~TimeS) +
@@ -121,7 +124,8 @@ xlabel="Sealing Temperature (deg C)"
 ylabel="Visual Hairlines Score"
 p1 <- ggplot(data,aes(x=TempC,y=Hairlines,group=LidFilm, colour=LidFilm, shape=LidFilm)) +
     geom_point(size=2, position=position_jitter(width=1.5, height=0.5)) +
-    stat_smooth(span=0.6, size=1, se=FALSE) +
+#    stat_smooth(span=0.6, size=1, se=FALSE) +
+    stat_smooth(method="lm",formula=y~ns(x,df=4), size=1, se=FALSE) +
     scale_y_continuous(minor_breaks = seq(0,6,0.5), breaks = seq(0,6,1)) +
     scale_x_continuous(minor_breaks = seq(110,200,5), breaks = seq(110,200,10)) +
     facet_grid(Material~TimeS) +
@@ -137,7 +141,8 @@ xlabel="Sealing Temperature (deg C)"
 ylabel="Visual Bubbles Score"
 p1 <- ggplot(data,aes(x=TempC,y=Bubbles,group=LidFilm, colour=LidFilm, shape=LidFilm)) +
     geom_point(size=2, position=position_jitter(width=1.5, height=0.5)) +
-    stat_smooth(span=0.6, size=1, se=FALSE) +
+#    stat_smooth(span=0.6, size=1, se=FALSE) +
+    stat_smooth(method="lm",formula=y~ns(x,df=4), size=1, se=FALSE) +
     scale_y_continuous(minor_breaks = seq(0,6,0.5), breaks = seq(0,6,1)) +
     scale_x_continuous(minor_breaks = seq(110,200,5), breaks = seq(110,200,10)) +
     facet_grid(Material~TimeS) +
@@ -153,7 +158,8 @@ xlabel="Sealing Temperature (deg C)"
 ylabel="Visual Caulking Score"
 p1 <- ggplot(data,aes(x=TempC,y=Caulking,group=LidFilm, colour=LidFilm, shape=LidFilm)) +
     geom_point(size=2, position=position_jitter(width=1.5, height=0.5)) +
-    stat_smooth(span=0.6, size=1, se=FALSE) +
+#    stat_smooth(span=0.6, size=1, se=FALSE) +
+    stat_smooth(method="lm",formula=y~ns(x,df=4), size=1, se=FALSE) +
     scale_y_continuous(minor_breaks = seq(0,6,0.5), breaks = seq(0,6,1)) +
     scale_x_continuous(minor_breaks = seq(110,200,5), breaks = seq(110,200,10)) +
     facet_grid(Material~TimeS) +
